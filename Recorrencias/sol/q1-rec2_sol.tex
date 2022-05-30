@@ -1,0 +1,36 @@
+
+{\sc Solução:}
+
+A equação  homogenêna $h_n:\ x_{n+1}-5x_n + 6x_n=0$ , tem como equação cracterística $r^2-5r+6=0$ e suas raízes são $r_1=2$ e $r_2=3$. Portanto, solução da homogênea é
+
+\begin{eqnarray}
+\label{homog:q1-rec2}
+h_n = C_1 2^n +C_2 3^n
+\end{eqnarray}
+
+\begin{align*}
+		\intertext{Considere a equação}
+		 	&=  n + 3^n\\
+		\intertext{Ela é da forma}
+			t_n	&= An+B+C3^n\\
+		\intertext{Mas teremos que aumentar o grau para }
+				&= An+B+nC3^n\\
+		\intertext{Assim, teremos que}
+		A(n+2)+B+C(n+2)3^{n+2}- & 5A(n+1)-5B-5C(n+1)3^{n+1}\\ 
+				+6An+6B+6C3^n &= n+3^n
+\end{align*}
+
+Simplificando
+
+\begin{align}
+		3An-3A+2B+5C3^n &= n+3^n \\
+		\intertext{o que nos dá}
+				A = \frac{1}{2},\ &B = \frac{3}{4}\ e\ C= \frac{1}{5}
+				\intertext{Logo, a solução particular é}
+				x_n &= \frac{1}{2} n +\frac{3}{4} + \frac{1}{5}3^n
+\end{align}
+Finalmente a solução geral é $x_n = h_n+t_n$
+\begin{align*}
+				x_n = \frac{1}{2} n +\frac{3}{4} + \frac{1}{5}3^n + C_1 2^n + C_2 3^n
+\end{align*}
+

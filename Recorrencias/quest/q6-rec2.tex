@@ -1,0 +1,48 @@
+%texto
+\item O DNA de um aluno de discreta é formado por sequências de cinco proteínas chamadas $0,\ 1,\
+  c,\ x$, e $y$. Nas sequências, nunca aparecem $cx$, $cy$, $yx$ e $yy$. Todas as outras
+  possibilidades são permitidas. 
+  \begin{enumerate}
+	%\item Crie um programa em C\texttt{++} que leia $n$ e liste todas sequências de $n$ termos conforme o enunciado.
+	\item Quantas são as possíveis sequências de DNA de um aluno de discreta com
+  $n$ proteínas?
+
+  {\bf Sugestão:} Sejam $a_n$ a quantidade de sequências de $n$ proteínas que não terminam com $c$ ou
+  $y$ e $b_n$ a quantidade de sequências que terminam com $c$ ou $y$. Queremos $x_n=a_n + b_n$ (Por quê?).
+				  \[\begin{cases}
+							a_0=1,\ b_0=0 \\
+							a_n=3a_{n-1}+2b_{n-1}\\
+							b_n= 2a_{n-1}+b_{n-1}
+					\end{cases}
+				  \]
+				Note que, $a_1=3$ e $b_1=2$(Por quê?). Isolando as variáveis\ldots
+%				\[
+%				  \begin{cases}
+%				 			a_0=1,\ b_0=0 \\
+%							b_{n-1}=\frac{a_n -3a_{n-1}}{2}\\
+%							a_{n-1}=\frac{b_n - b_{n-1}}{2}
+%				  \end{cases}
+%				\]
+%		Como vale para todo $n$, podemos substituir:
+%		
+%				\[
+%				  \begin{cases}
+%				 			a_0=1,\ b_0=0 \\
+%							b_{n-1}=\frac{ \frac{b_{n+1} - b_{n}}{2} -3\frac{b_n - b_{n-1}}{2}}
+%{2}\\
+%a_{n-1}=\frac{\frac{a_{n+1}-3a_n}{2} - \frac{a_n-3a_{n-1}}{2}}{2}
+%				  \end{cases}
+%				  \Leftrightarrow 
+%				  \begin{cases}
+%					a_0=1,\ b_0=0\\
+%					b_{n+1}=4b_{n}+b_{n-1}\\
+%					a_{n+1}=4a_{n}+a_{n-1}\\
+%				  \end{cases}
+%				\]
+%				Complete a solução achando as fórmulas fechadas para $a_n$ e $b_n$.
+%
+	\item Quantas são as possíveis sequências de DNA de um aluno de discreta com $10$ proteínas?
+  \end{enumerate}
+  
+  %Uma sonda espacial descobriu que o material orgânico em Marte tem DNA composto de cinco símbolos, denotado por (a, b, c, d, e), em vez dos quatro componentes do DNA terráqueo. Os quatro pares cd, ce, ed e ee nunca ocorrem consecutivamente em uma string de DNA marciano, mas qualquer string sem pares proibidos é possível. (Assim, bbcda é proibida, mas bbdca é OK.) Como casar com seqüências de DNA de Marte de comprimento n são possíveis? (Quando n = 2 a resposta é 21, porque as extremidades esquerda e direita de uma string são distinguíveis.)
+%Solução pag.559 

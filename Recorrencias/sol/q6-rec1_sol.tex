@@ -1,0 +1,43 @@
+
+{\sc Solução:}
+
+Da equação $x_{n+1}=(n+1)x_n + n$ com $x_1=1$, temos que $f(n)=n$ e $g(n)=n+1$
+
+\begin{align*}
+		\intertext{Considere a homogênea}
+		x_{n+1} &=(n+1)x_n \\
+		n=1 \to x_2 &= 2x_1 \\
+		n=2 \to x_3 &= 3x_2 \\
+		\cdots & \\
+		n=n \to x_n &=  n x_{n-1}\\
+		\intertext{Multiplicando}
+		x_n &= x_1\cdot 2\cdot 3 \cdots n \\
+		\intertext{Para $x_1=1$}
+		x_n &= 1\cdot 2\cdot 3 \cdots n \\
+		x_n &= n!
+		\intertext{Isso é nossa $a_n$}
+		a_n &= n!
+\end{align*}
+
+Considere a recorrência $x_n = a_n y_n$, nossa equação a determinar será
+
+\begin{align}\label{eq:fund}
+		x_n &= n! y_n
+\end{align}
+Do teorema fundamental, devemos encontrar
+\begin{align*}
+		y_{n+1} &= y_n + \frac{f(n)}{a_n g(n)}\\
+		y_{n+1} &= y_n + \frac{n}{n! (n+1)}\\
+		y_{n+1} &= y_n + \frac{n}{(n+1)!}\\
+		\intertext{Resolvendo}
+		n=1 \to y_2 &= y_1 +\frac{1}{2!}\\
+		n=2 \to y_3 &= y_2 +\frac{2}{3!}\\
+		n=3 \to y_4 &= y_3 +\frac{3}{4!}\\
+		\cdots & \\
+		n=n \to y_n &= y_{n-1} +\frac{n-1}{n!}\\
+		\intertext{Somando}
+		y_n &= y_1 + \left(  \frac{1}{2!}+\frac{2}{3!}+\frac{3}{4!}+\cdots + \frac{n-1}{n!} \right)
+		\intertext{Observe a relação}
+		\frac{1}{(n-1)!}-\frac{1}{n!} &= \frac{n-1}{n!}\\
+		\intertext{Aplicando na última equação}
+\end{align*}
